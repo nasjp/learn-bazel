@@ -1,0 +1,11 @@
+name: test
+on: [push]
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Test
+        run: bazelisk test test:hello-test
