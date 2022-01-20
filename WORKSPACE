@@ -21,11 +21,11 @@ rules_proto_toolchains()
 # gRPC
 http_archive(
     name = "com_github_grpc_grpc",
-    sha256 = "2fcb7f1ab160d6fd3aaade64520be3e5446fc4c6fa7ba6581afdc4e26094bd81",
+    sha256 = "9647220c699cea4dafa92ec0917c25c7812be51a18143af047e20f3fb05adddc",
 
-    strip_prefix = "grpc-1.26.0",
+    strip_prefix = "grpc-1.43.0",
     urls = [
-        "https://github.com/grpc/grpc/archive/v1.26.0.tar.gz",
+        "https://github.com/grpc/grpc/archive/v1.43.0.tar.gz",
         ],
 )
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
