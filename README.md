@@ -1,3 +1,5 @@
+[![test](https://github.com/nasjp/learn-bazel/actions/workflows/workflow.yml/badge.svg)](https://github.com/nasjp/learn-bazel/actions/workflows/workflow.yml)
+
 # learn-bazel
 
 ```sh
