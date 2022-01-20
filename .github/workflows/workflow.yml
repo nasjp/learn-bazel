@@ -9,3 +9,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
         run: bazelisk test test:hello-test
+      - name: Build
+        run: bazelisk build //main:hello-world
