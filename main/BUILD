@@ -4,6 +4,8 @@ cc_library(
     hdrs = ["hello-greet.h"],
     deps = [
 			"@boost//:log",
+            "//proto:hey_cc_grpc",
+            "@com_github_grpc_grpc//:grpc++",
     ],
     visibility = ["//test:__pkg__"],
 )
