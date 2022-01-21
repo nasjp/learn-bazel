@@ -51,11 +51,14 @@ http_archive(
 )
 
 # Boost
-git_repository(
+# https://github.com/nelhage/rules_boost
+_RULES_BOOST_COMMIT = "685557254da7ee57afc1204189b58253972e16be"
+
+http_archive(
     name = "com_github_nelhage_rules_boost",
-    commit = "685557254da7ee57afc1204189b58253972e16be",
-    remote = "https://github.com/nelhage/rules_boost",
-    shallow_since = "1642479500 -0800",
+    sha256 = "11e436c3888f6c9583ea2e0beabb12167186b5c1d191722d191ea13a46a60c7a",
+    strip_prefix = "rules_boost-%s" % _RULES_BOOST_COMMIT,
+    urls = ["https://github.com/nelhage/rules_boost/archive/%s.tar.gz" % _RULES_BOOST_COMMIT],
 )
 
 load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
