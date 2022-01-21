@@ -5,6 +5,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # Proto
+# https://github.com/bazelbuild/rules_proto
 http_archive(
     name = "rules_proto",
     sha256 = "66bfdf8782796239d3875d37e7de19b1d94301e8972b3cbd2446b332429b4df1",
@@ -22,6 +23,7 @@ rules_proto_dependencies()
 rules_proto_toolchains()
 
 # gRPC
+# https://github.com/grpc/grpc
 http_archive(
     name = "com_github_grpc_grpc",
     sha256 = "9647220c699cea4dafa92ec0917c25c7812be51a18143af047e20f3fb05adddc",
@@ -40,6 +42,7 @@ load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
 grpc_extra_deps()
 
 # Google Test
+# https://github.com/google/googletest
 http_archive(
     name = "com_google_googletest",
     sha256 = "353571c2440176ded91c2de6d6cd88ddd41401d14692ec1f99e35d013feda55a",
