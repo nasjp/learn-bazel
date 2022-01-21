@@ -8,3 +8,8 @@ bazelisk test test:hello-test
 bazelisk build //main:hello-world
 bazelisk run //main:hello-world
 ```
+
+## dependencies
+
+- bazelisk
+- buildifier

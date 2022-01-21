@@ -2,12 +2,12 @@ cc_library(
     name = "hello-greet",
     srcs = ["hello-greet.cpp"],
     hdrs = ["hello-greet.h"],
-    deps = [
-			"@boost//:log",
-            "//proto:hey_cc_grpc",
-            "@com_github_grpc_grpc//:grpc++",
-    ],
     visibility = ["//test:__pkg__"],
+    deps = [
+        "//proto:hey_cc_grpc",
+        "@boost//:log",
+        "@com_github_grpc_grpc//:grpc++",
+    ],
 )
 
 cc_binary(

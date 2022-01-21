@@ -3,7 +3,7 @@ cc_test(
     srcs = ["hello-test.cc"],
     copts = ["-Iexternal/gtest/include"],
     deps = [
-        "@com_google_googletest//:gtest_main",
         "//main:hello-greet",
+        "@com_google_googletest//:gtest_main",
     ],
 )
