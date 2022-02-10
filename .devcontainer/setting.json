@@ -105,9 +105,7 @@
 		"strstream": "cpp",
 		"typeindex": "cpp",
 		"variant": "cpp",
-		"*.ipp": "cpp",
-		"*.tcc": "cpp",
-		"ranges": "cpp"
+		"*.ipp": "cpp"
 	},
-	"C_Cpp.errorSquiggles": "Disabled",
+	"C_Cpp.errorSquiggles": "Disabled"
 }

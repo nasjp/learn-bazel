@@ -5,24 +5,13 @@
 		{
 			"name": "Linux g++",
 			"includePath": [
-				"${workspaceFolder}/**"
+				"${workspaceFolder}/bazel-out/k8-fastbuild/bin/**"
 			],
 			"defines": [],
-			"compilerPath": "/usr/bin/g++",
+			"compilerPath": "/usr/local/bin/g++",
 			"cStandard": "c17",
 			"cppStandard": "c++17",
 			"intelliSenseMode": "gcc-x64"
-		},
-		{
-			"name": "Linux Clang++",
-			"includePath": [
-				"${workspaceFolder}/**"
-			],
-			"defines": [],
-			"compilerPath": "/usr/bin/clang++",
-			"cStandard": "c17",
-			"cppStandard": "c++17",
-			"intelliSenseMode": "clang-x64"
 		}
 	],
 	"version": 4

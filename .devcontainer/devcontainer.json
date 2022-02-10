@@ -1,0 +1,15 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "dev",
+	"workspaceFolder": "/app",
+	"settings": {},
+	"extensions": [
+		"BazelBuild.vscode-bazel",
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack",
+		"ms-vscode.cpptools-themes",
+	]
+}

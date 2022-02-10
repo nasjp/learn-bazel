@@ -11,7 +11,7 @@ cc_library(
 )
 
 cc_binary(
-    name = "hello-world",
+    name = "hello",
     srcs = ["main.cpp"],
     deps = [
         ":hello-greet",

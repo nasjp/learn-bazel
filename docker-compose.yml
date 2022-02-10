@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: learn-bazel:1.0.0
+    command: sh -c "echo 'sleep start';sleep infinity"
+    working_dir: /app
+    depends_on:
+      - db
+    volumes:
+      - ./:/app:cached
+      - bazel-cache:/root/.cache/bazel
+    ports:
+      - "0.0.0.0:8777:8777"
+
+  db:
+    image: mysql:5.7.25
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - "0.0.0.0:3336:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql:cached
+      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:cached
+      - ./db/conf.d:/etc/mysql/conf.d:cached
+
+volumes:
+    mysql-data:
+        external: false
+
+    bazel-cache:
+        external: false
