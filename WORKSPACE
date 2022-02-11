@@ -81,15 +81,16 @@ boost_deps()
 
 # MySQL Connector/C++
 # https://github.com/mysql/mysql-connector-cpp
+
 new_local_repository(
     name = "libmysqlcppconn_linux",
-    build_file = "@//third_party:libmysqlcppconn_linux.BUILD",
+    build_file = "//third_party:libmysqlcppconn_linux.BUILD",
     path = "/tmp/libmysqlcppconn/usr/",
 )
 
 http_archive(
     name = "libmysqlcppconn_windows",
-    build_file = "@//third_party:libmysqlcppconn_windows.BUILD",
+    build_file = "//third_party:libmysqlcppconn_windows.BUILD",
     # sha256 = "11e436c3888f6c9583ea2e0beabb12167186b5c1d191722d191ea13a46a60c7a",
     strip_prefix = "mysql-connector-c++-8.0.28-winx64",
     urls = ["https://dev.mysql.com/get/Downloads/Connector-C++/mysql-connector-c++-8.0.28-winx64.zip"],

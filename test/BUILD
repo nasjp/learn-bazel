@@ -1,15 +1,11 @@
-LIBMYSQLCPPCONN = select({
-    "@platforms//os:windows": ["@libmysqlcppconn_windows"],
-    "//conditions:default": ["@libmysqlcppconn_linux"],
-})
-
 cc_test(
     name = "hello",
     srcs = ["hello-test.cpp"],
     deps = [
         ":util",
         "//main:hello-greet",
-    ] + LIBMYSQLCPPCONN,
+        "//third_party:libmysqlcppconn",
+    ],
 )
 
 cc_library(
