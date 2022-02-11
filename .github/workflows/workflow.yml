@@ -13,9 +13,9 @@ jobs:
         run: sleep 30s
         shell: bash
       - name: Build
-        run: docker-compose exec dev bazel build main:hello
+        run: docker compose exec -T dev bazel build main:hello
       - name: Test
-        run: docker-compose exec dev bazel test test:hello
+        run: docker compose exec -T dev bazel test test:hello
 
   test-windows:
     name: Test Windows
